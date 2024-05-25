@@ -1,0 +1,25 @@
+www.vedaitapp.in
+
+Dashboard
+
+student portal -- login
+admin portal --- login
+trainers portal -- login
+management portal  --login
+
+signup -- database -- login -- --authentication --- OTP, MFA--scanner 
+-- send an email to the user
+
+enquiry form --- database --- submit --enquiryid generate automatically
+if interested they will register
+
+capture registered students -- generate separate id for registered students
+
+-- send a whatsapp welcome message for this registered students with their
+ registerid, fees they paid and the course they joined and date of join, batchid, batch timings.
+
+-- generate a report of the students for the management and save the data from the database in an excelsheet.
+
+-- generate a report based on the dates start date to till date.
+
+II. take the student data from the database and use it for the attendance
