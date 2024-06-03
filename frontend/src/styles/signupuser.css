@@ -1,0 +1,91 @@
+.row {
+    column-count: 2;
+    column-gap: 0px;
+    display: flex;
+    height: 100vh;
+    /* width: 100%; */
+  }
+
+  .left-side {
+    background-color: #298cba;
+    /* height: 100%; */
+    width: 30%
+  }
+
+  .right-side {
+    height: 70%;
+    width: 70%;
+  }
+
+  .SignupUser {
+    /* padding: 100px; */
+    margin: 15%;
+   }
+
+  .userTypes {
+    column-count: 2;
+    /* column-gap: 0px; */
+   }
+
+  .SignupUserForm {
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding-top: 300px;
+  }
+  
+  .title {
+    font-size: 24px;
+  }
+
+  button {
+    width: 75%;
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px;
+  }
+  
+  button:hover {
+    background-color: #e9df2b;
+    color: black;
+  }
+
+    
+  /* .left-side {
+    background-color: #298cba;
+    height: 100vh;
+    width: 100%;
+    
+  }
+  .right-side {
+    height: 100vh;
+    width: 100%;
+  } 
+  
+  .signupuser {
+    height: 70%;
+    width: 50%;
+  }
+  
+  input[type=text], select {
+    width: 70%;
+    margin: 8px 0;
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  input[type=password], select {
+    width: 70%;
+    margin: 8px 0;
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  } */

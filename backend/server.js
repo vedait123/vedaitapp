@@ -5,6 +5,7 @@ const cors = require('cors');
 
 const app = express()
 app.use(cors())
+app.use(express.json())
 
 // const db = mysql.createConnection({
 //     host: 'localhost',
@@ -37,7 +38,35 @@ app.get('/users', (req, res) => {
         if(err) return res.json(err);
         return res.json(data);
     })
-})
+});
+
+app.post('/login', (req, res) => {
+    const { email, password } = req.body;
+    
+    const query = 'SELECT * FROM users WHERE email = ?';
+    pool.query(query, [email], async (err, results) => {
+        if (err) {
+            return res.status(500).send({ message: 'Error logging in', error: err.message });
+        }
+
+        res.status(200).send({ message: 'Login successful'});
+});
+});
+
+app.post('/signup', (req, res) => {
+    const { fullname, email, password } = req.body;
+    
+    const query = 'INSERT INTO users (fullname, email, password) VALUES (?, ?, ?)';
+    pool.query(query, [fullname, email, password], (err, result) => {
+        if (err) {
+            return res.status(500).send({ message: 'Error signing up', error: err.message });
+        }
+
+        // Send a response back to the client
+        res.status(200).send({ message: 'Signup successful'});
+    });
+});
+
 
 app.listen(8081, () => {
     console.log("listening..");
