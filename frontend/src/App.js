@@ -7,6 +7,7 @@ import Signup from './pages/signup';
 import SignupUser from './pages/SignupUser';
 import ForgotPassword from './pages/ForgotPassword';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import EmailForm from './pages/EmailForm';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Route exact path="signup" element={<Signup />} />
             <Route exact path="forgotpassword" element={<ForgotPassword />} /> 
             <Route exact path="signupuser" element={<SignupUser />} />
+            <Route exact path="emailform" element={<EmailForm />} />
           </Routes>
           <div className="list">
               <ul>
@@ -31,6 +33,7 @@ function App() {
                   <li><Link to="signup">Signup</Link></li>
                   <li><Link to="signupuser">Signup User</Link></li>
                   <li><Link to="forgotpassword">Forgot Password</Link></li>
+                  <li><Link to="emailform">Email Form</Link></li>
               </ul>
           </div>
         </Router>

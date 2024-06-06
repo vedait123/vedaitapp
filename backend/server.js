@@ -7,13 +7,6 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-// const db = mysql.createConnection({
-//     host: 'localhost',
-//     user: 'root',
-//     password: 'Beautiful19',
-//     database: 'vedaitapp'
-// })
-
 const pool = createPool({
     host: 'localhost',
      user: 'root',
@@ -21,17 +14,12 @@ const pool = createPool({
      database: 'vedaitapp'
 })
 
-// pool.query(`select * from users`, (err, result, fields) =>{
-//     if(err){
-//         return console.log(err);
-//     }
-//     return console.log(result);    
-// })
 
 app.get('/', (req, res) => {
     return res.json("From backend");
 })
 
+//users
 app.get('/users', (req, res) => {
     const sql = "SELECT * FROM users";
     pool.query(sql, (err, data) => {
@@ -40,6 +28,7 @@ app.get('/users', (req, res) => {
     })
 });
 
+//login
 app.post('/login', (req, res) => {
     const { email, password } = req.body;
     
@@ -53,6 +42,7 @@ app.post('/login', (req, res) => {
 });
 });
 
+//signup
 app.post('/signup', (req, res) => {
     const { fullname, email, password } = req.body;
     
@@ -67,7 +57,28 @@ app.post('/signup', (req, res) => {
     });
 });
 
+//email
+app.post('/send-email', (req, res) => {
+    const { to, subject, text } = req.body;
+    sendEmail(to, subject, text);
+    res.send('Email sent');
+  });
 
 app.listen(8081, () => {
     console.log("listening..");
 })
+
+
+// pool.query(`select * from users`, (err, result, fields) =>{
+//     if(err){
+//         return console.log(err);
+//     }
+//     return console.log(result);    
+// })
+
+// const db = mysql.createConnection({
+//     host: 'localhost',
+//     user: 'root',
+//     password: 'Beautiful19',
+//     database: 'vedaitapp'
+// })

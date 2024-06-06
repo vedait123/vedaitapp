@@ -68,7 +68,6 @@ const Login = () => {
                 </div>
                 <div>
                   <Link to="/ForgotPassword" style={{ textDecoration: 'none' }}> Forgot Password?</Link>
-                    {/* <p><a href="#">Forgot Password?</a></p> */}
                 </div>
                 <div>
                     <button type="submit">Login</button>
@@ -76,16 +75,12 @@ const Login = () => {
                 <div>
                     <p>Don't have an account? 
                     <Link to="/signup" style={{ textDecoration: 'none' }}> Sign Up</Link>
-                        {/* <a href="signup.js">Sign Up</a> */}
                     </p>
                 </div>
                 <div className="alternate-login">
                   <GoogleOAuthProvider clientId = "YOUR_CLIENT_ID">
-                    {/* <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi_gKPSwrmGAxWFb2wGHUkjCL8QFnoECBoQAQ&url=https%3A%2F%2Faccounts.google.com%2Fservicelogin%3Fhl%3Den-gb&usg=AOvVaw2A5O795DiQmOiXvDazhDqw&opi=89978449" target='_blank' rel="noreferrer"> */}
                     <GoogleLogin onSuccess = {handleSuccess} onError = {handleError} />
-                    {/* <img src= {google} alt="Google" className="login-icon"></img> */}
                   </GoogleOAuthProvider>
-                    {/* </a> */}
                     <a href="https://www.facebook.com/login/" target='_blank' rel="noreferrer">
                     <img src={facebook} alt="Facebook" className="login-icon"></img>
                     </a>
@@ -103,3 +98,9 @@ const Login = () => {
 };
 
 export default Login
+
+{/* <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi_gKPSwrmGAxWFb2wGHUkjCL8QFnoECBoQAQ&url=https%3A%2F%2Faccounts.google.com%2Fservicelogin%3Fhl%3Den-gb&usg=AOvVaw2A5O795DiQmOiXvDazhDqw&opi=89978449" target='_blank' rel="noreferrer"> */}
+                    {/* <img src= {google} alt="Google" className="login-icon"></img> */}
+                                        {/* </a> */}
+                                                            {/* <p><a href="#">Forgot Password?</a></p> */}
+                                                                                    {/* <a href="signup.js">Sign Up</a> */}

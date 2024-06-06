@@ -15,6 +15,9 @@ USE vedaitapp;
 -- ALTER TABLE users 
 -- MODIFY COLUMN phone varchar(20);
 
+ALTER TABLE users 
+ADD COLUMN password varchar(20);
+
 -- CREATE TABLE courses (
 -- course_id varchar(20),
 -- course_name varchar(100),
@@ -26,4 +29,23 @@ USE vedaitapp;
 -- student_count int
 -- );
 
+-- DID NOT CREATE TABLE YET
+-- CREATE TABLE login (
+-- email varchar(50),
+-- password varchar(50)
+-- );
+
+-- DID NOT CREATE TABLE YET
+-- CREATE TABLE signup (
+-- fullName varchar (50),
+-- email varchar(50),
+-- password varchar(50)
+-- );
+
 -- insert into users (fullname, email, phone) values ('Ananya Amireddy', 'ananyareddy412@gmail.com', '6303012091');
+
+select * from users;
+
+delete from users where fullname = 'Abhi';
+
+-- set sql_safe_updates = 0;
