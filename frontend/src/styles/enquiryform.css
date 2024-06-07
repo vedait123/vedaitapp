@@ -1,0 +1,47 @@
+.enquiryform {
+    background-color: white;
+    margin: 20px 200px 100px 200px;
+    padding: 20px 20px;
+    box-shadow: 10px 10px 5px gray;
+    border-radius: 20px;
+}
+
+.enquirypage table, tr, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.enquirypage table {
+    width: 100%;
+}
+
+.enquirypage p {
+    margin: auto;
+}
+
+.enquirypage h2 {
+    margin: 0px 10px 10px 0px;
+}
+
+.tabletitle {
+    background-color: #c0e2f1;
+}
+
+.header {
+    text-align: center;
+    padding: 10px;
+    background-color: #f8f5ba;
+    border-radius: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.enquirysubmit {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.enquirypage input[type=text] {
+    width: 75%;
+    margin: auto;
+    padding: 5px;
+}

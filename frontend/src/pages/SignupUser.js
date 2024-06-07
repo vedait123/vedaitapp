@@ -10,7 +10,7 @@ function SignupCopy() {
 
   return (
     <>
-        <div class="SignupUser">
+        <div class="signupuser">
             <div class = "row">
                     <div class="left-side">
                         <img src= {logoWide} class = "logoWide" alt="logoWide" />

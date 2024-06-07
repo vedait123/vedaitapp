@@ -1,10 +1,10 @@
-import React, {useState, formData} from 'react';
+import React, {useState} from 'react';
 import axios from 'axios';
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import '../styles/login.css';
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 import logoWide from '../images/Veda_Logo_Wide.png';
-import google from '../images/google.png';
+//import google from '../images/google.png';
 import github from '../images/github.png';
 import twitter from '../images/twitter.png';
 import facebook from '../images/facebook.png';
